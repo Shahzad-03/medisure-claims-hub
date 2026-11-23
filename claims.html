@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medisure Claims Hub - Claims Processing</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="shell">
+  <aside aria-label="System sidebar">
+    <div class="brand">
+      <div class="seal" aria-hidden="true">MH</div>
+      <div>
+        <h1 class="brand-title">Medisure Claims Hub</h1>
+        <p class="brand-sub">Hospital claims system</p>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Dashboard</a><a href="patients.html">Patient Records</a><a href="providers.html">Provider Records</a><a href="visits.html">Visit Details</a><a href="prescriptions.html">Prescription Review</a><a href="claims.html" class="active">Claims Processing</a><a href="reports.html">Reports</a><a href="help.html">Help</a>
+    </nav>
+  </aside>
+  <main id="content">
+    <div class="wrap">
+      <section class="grid" aria-labelledby="claimsTitle">
+        <div class="topline">
+          <div><div class="crumb">Claims Processing</div><h2 id="claimsTitle" class="pageTitle">Claim review and decision screen</h2></div>
+        </div>
+
+        <div class="detailsLayout">
+          <div class="panel grid">
+            <div class="row" style="justify-content:space-between"><h3 style="margin:0">Claim summary</h3><div class="price">CL-40019</div></div>
+            <div class="factStrip">
+              <div class="fact"><div class="k">Patient</div><div class="v">John Fraser</div></div>
+              <div class="fact"><div class="k">Provider</div><div class="v">Dr Campbell</div></div>
+              <div class="fact"><div class="k">Visit date</div><div class="v">13 Apr 2026</div></div>
+              <div class="fact"><div class="k">Status</div><div id="claim-status" class="v">Held</div></div>
+            </div>
+
+            <table aria-label="Linked evidence">
+              <thead>
+                <tr><th>Evidence type</th><th>Summary</th><th>Status</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Visit record</td><td>Consultation notes and diagnosis attached</td><td>Complete</td></tr>
+                <tr><td>Prescription</td><td>Metformin prescribed for diabetes management</td><td>Complete</td></tr>
+                <tr><td>Conflict check</td><td>No severe interaction found</td><td>Passed</td></tr>
+              </tbody>
+            </table>
+            <div class="field"><label for="decisionNote">Decision note</label><textarea id="decisionNote" rows="4" placeholder="Enter decision note"></textarea></div>
+          </div>
+
+          <div class="panel grid">
+            <h3 style="margin:0">Actions</h3>
+            <div id="claim-banner" class="panel successBanner hidden">
+              <strong>Decision updated</strong>
+              <div id="claim-banner-text" class="muted">The claim decision has been recorded.</div>
+            </div>
+            <button class="btn primary" type="button">Approve claim</button>
+            <button class="btn secondary" type="button">Hold for review</button>
+            <button class="btn" type="button">Reject claim</button>
+            <div class="panel alertBox">
+              <strong>Audit trail</strong>
+              <div id="audit-trail" class="muted">All claim decisions are stored with timestamps and user notes.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

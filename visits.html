@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medisure Claims Hub - Visit Details</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="shell">
+  <aside aria-label="System sidebar">
+    <div class="brand">
+      <div class="seal" aria-hidden="true">MH</div>
+      <div>
+        <h1 class="brand-title">Medisure Claims Hub</h1>
+        <p class="brand-sub">Hospital claims system</p>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Dashboard</a><a href="patients.html">Patient Records</a><a href="providers.html">Provider Records</a><a href="visits.html" class="active">Visit Details</a><a href="prescriptions.html">Prescription Review</a><a href="claims.html">Claims Processing</a><a href="reports.html">Reports</a><a href="help.html">Help</a>
+    </nav>
+  </aside>
+  <main id="content">
+    <div class="wrap">
+      <section class="grid" aria-labelledby="visitsTitle">
+        <div class="topline">
+          <div><div class="crumb">Visit Details</div><h2 id="visitsTitle" class="pageTitle">Consultation record entry</h2></div>
+        </div>
+
+        <div class="panel grid">
+          <div id="visit-step-0" class="visit-step-panel grid">
+            <h3 style="margin:0">Patient details</h3>
+            <div class="searchStrip">
+              <div class="field"><label for="vPatient">Patient</label><input id="vPatient" placeholder="Search patient" /></div>
+              <div class="field"><label for="vProvider">Provider</label><select id="vProvider"><option selected>Select provider</option><option>Dr Patel</option><option>Dr Campbell</option><option>Dr Singh</option></select></div>
+              <div class="field"><label for="vDate">Visit date</label><input id="vDate" placeholder="14/04/2026" /></div>
+              <div class="field"><label for="vType">Visit type</label><select id="vType"><option selected>Select visit type</option><option>Consultation</option><option>Follow-up</option><option>Prescription review</option></select></div>
+            </div>
+            <div class="panel alertBox">
+              <strong>Selected patient</strong>
+              <div class="muted">Patient summary will appear here after details are entered.</div>
+            </div>
+          </div>
+
+          <div id="visit-step-1" class="visit-step-panel grid">
+            <div class="grid twoCol">
+              <div class="panel">
+                <h3 style="margin-top:0">Visit notes</h3>
+                <div class="field"><label for="symptoms">Symptoms</label><textarea id="symptoms" rows="4" placeholder="Enter symptoms"></textarea></div>
+                <div class="field"><label for="diagnosis">Diagnosis</label><textarea id="diagnosis" rows="4" placeholder="Enter diagnosis"></textarea></div>
+              </div>
+              <div class="panel">
+                <h3 style="margin-top:0">Administrative details</h3>
+                <div class="field"><label for="visitLocation">Location</label><input id="visitLocation" placeholder="Enter location" /></div>
+                <div class="field"><label for="visitDuration">Duration</label><input id="visitDuration" placeholder="Enter duration" /></div>
+                <div class="field"><label for="visitStatus">Visit status</label><select id="visitStatus"><option selected>Select status</option><option>Complete</option><option>In progress</option><option>Requires follow-up</option></select></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="visit-step-2" class="visit-step-panel grid">
+            <div class="grid twoCol">
+              <div class="panel">
+                <h3 style="margin-top:0">Treatment details</h3>
+                <div class="field"><label for="treatment">Treatment given</label><textarea id="treatment" rows="4" placeholder="Enter treatment"></textarea></div>
+                <div class="field"><label for="followup">Follow-up</label><textarea id="followup" rows="4" placeholder="Enter follow-up plan"></textarea></div>
+              </div>
+              <div class="panel">
+                <h3 style="margin-top:0">Prescription and notes</h3>
+                <div class="field"><label for="prescribedDrug">Prescribed drug</label><input id="prescribedDrug" placeholder="Enter prescribed drug" /></div>
+                <div class="field"><label for="riskNotes">Risk notes</label><textarea id="riskNotes" rows="4" placeholder="Enter risk notes"></textarea></div>
+              </div>
+            </div>
+          </div>
+
+          <div id="visit-step-3" class="visit-step-panel grid">
+            <div class="panel">
+              <h3 style="margin-top:0">Confirm visit record</h3>
+              <div id="visit-summary" class="muted">Review the information before saving the visit.</div>
+            </div>
+            <div id="visit-save-message" class="panel alertBox hidden">
+              <strong>Visit saved</strong>
+              <div class="muted">The consultation record has been saved to the patient history.</div>
+            </div>
+          </div>
+
+          <div class="row" style="justify-content:flex-end">
+            <button id="visit-save" class="btn secondary" type="button">Save visit</button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

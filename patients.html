@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medisure Claims Hub - Patient Records</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="shell">
+  <aside aria-label="System sidebar">
+    <div class="brand">
+      <div class="seal" aria-hidden="true">MH</div>
+      <div>
+        <h1 class="brand-title">Medisure Claims Hub</h1>
+        <p class="brand-sub">Hospital claims system</p>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Dashboard</a><a href="patients.html" class="active">Patient Records</a><a href="providers.html">Provider Records</a><a href="visits.html">Visit Details</a><a href="prescriptions.html">Prescription Review</a><a href="claims.html">Claims Processing</a><a href="reports.html">Reports</a><a href="help.html">Help</a>
+    </nav>
+  </aside>
+  <main id="content">
+    <div class="wrap">
+      <section class="grid" aria-labelledby="patientsTitle">
+        <div class="topline">
+          <div><div class="crumb">Patient Records</div><h2 id="patientsTitle" class="pageTitle">Patient summary and linked history</h2></div>
+        </div>
+
+        <div class="panel grid">
+          <div class="row" style="justify-content:space-between">
+            <div class="row" style="flex:1">
+              <div class="field" style="min-width:200px"><label for="pSearch">Patient / Insurance ID</label><input id="pSearch" placeholder="Aisha Khan or INS-204991" /></div>
+              <div class="field" style="min-width:180px"><label for="pDoctor">Primary doctor</label><select id="pDoctor"><option>Any</option><option>Dr Patel</option><option>Dr Campbell</option><option>Dr Singh</option></select></div>
+              <div class="field" style="min-width:160px"><label for="pStatus">Policy status</label><select id="pStatus"><option>Active</option><option>Archived</option></select></div>
+            </div>
+            <div class="row"><button class="btn primary" type="button">Apply</button><button class="btn" type="button">Reset</button></div>
+          </div>
+
+          <div class="detailsLayout">
+            <div class="panel grid">
+              <div class="row" style="justify-content:space-between"><h3 style="margin:0">Patient card</h3><div id="patient-insurance" class="price">INS-204991</div></div>
+              <div class="factStrip">
+                <div class="fact"><div class="k">Name</div><div id="patient-name" class="v">Aisha Khan</div></div>
+                <div class="fact"><div class="k">DOB</div><div id="patient-dob" class="v">12 Mar 1988</div></div>
+                <div class="fact"><div class="k">Primary doctor</div><div id="patient-doctor" class="v">Dr Patel</div></div>
+                <div class="fact"><div class="k">Policy</div><div id="patient-policy" class="v">Active</div></div>
+              </div>
+
+              <div class="tabs">
+                <button class="tab active" data-ptab="details" type="button">Details</button>
+                <button class="tab" data-ptab="visits" type="button">Visits</button>
+                <button class="tab" data-ptab="drugs" type="button">Prescriptions</button>
+              </div>
+
+              <div id="p-details" class="panel">
+                <p><strong>Address:</strong> <span id="patient-address">44 Rosemount Street, Aberdeen</span></p>
+                <p><strong>Phone:</strong> <span id="patient-phone">07700 123456</span></p>
+                <p><strong>Email:</strong> <span id="patient-email">aisha.khan@email.com</span></p>
+                <p><strong>Insurance company:</strong> <span id="patient-company">North Care Health Insurance</span></p>
+              </div>
+              <div id="p-visits" class="panel hidden">
+                <ul id="patient-visits-list" class="muted" style="margin:0;padding-left:18px">
+                  <li>02 Apr 2026 - Consultation with Dr Patel</li>
+                  <li>27 Mar 2026 - Follow-up visit</li>
+                  <li>10 Mar 2026 - Initial assessment</li>
+                </ul>
+              </div>
+              <div id="p-drugs" class="panel hidden">
+                <ul id="patient-drugs-list" class="muted" style="margin:0;padding-left:18px">
+                  <li>Atorvastatin - Active</li>
+                  <li>Ibuprofen - Completed</li>
+                  <li>Omeprazole - Active</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="panel grid">
+              <h3 style="margin:0">Quick actions</h3>
+              <a class="btn primary" href="claims.html" style="text-decoration:none;display:inline-block;text-align:center">Open claim</a>
+              <a class="btn secondary" href="visits.html" style="text-decoration:none;display:inline-block;text-align:center">Add visit note</a>
+              <a class="btn" href="prescriptions.html" style="text-decoration:none;display:inline-block;text-align:center">Review prescriptions</a>
+              <div class="panel alertBox">
+                <strong>Record alerts</strong>
+                <div id="patient-alerts" class="muted">Incomplete allergy field and one pending prescription review.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

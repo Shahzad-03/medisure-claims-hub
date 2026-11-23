@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medisure Claims Hub - Reports</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="shell">
+  <aside aria-label="System sidebar">
+    <div class="brand">
+      <div class="seal" aria-hidden="true">MH</div>
+      <div>
+        <h1 class="brand-title">Medisure Claims Hub</h1>
+        <p class="brand-sub">Hospital claims system</p>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Dashboard</a><a href="patients.html">Patient Records</a><a href="providers.html">Provider Records</a><a href="visits.html">Visit Details</a><a href="prescriptions.html">Prescription Review</a><a href="claims.html">Claims Processing</a><a href="reports.html" class="active">Reports</a><a href="help.html">Help</a>
+    </nav>
+  </aside>
+  <main id="content">
+    <div class="wrap">
+      <section class="grid" aria-labelledby="reportsTitle">
+        <div class="topline">
+          <div><div class="crumb">Reports</div><h2 id="reportsTitle" class="pageTitle">Trends and reporting overview</h2></div>
+        </div>
+        <div class="panel">
+          <div class="row">
+            <button class="btn primary" type="button" data-report="claims">Claims</button>
+            <button class="btn" type="button" data-report="alerts">Alerts</button>
+            <button class="btn" type="button" data-report="providers">Providers</button>
+            <select id="report-range" style="max-width:220px">
+              <option value="30">Last 30 days</option>
+              <option value="90">Last 90 days</option>
+              <option value="365">Last 12 months</option>
+            </select>
+          </div>
+        </div>
+        <div class="tiles">
+          <div class="tile"><div><h3 id="report-card-1-title">Claims by month</h3><p id="report-card-1-text">Track claims processed across the current quarter.</p></div><div id="report-card-1-value" class="price">268</div></div>
+          <div class="tile"><div><h3 id="report-card-2-title">Drug alerts</h3><p id="report-card-2-text">Monitor high-risk medication combinations.</p></div><div id="report-card-2-value" class="price">34</div></div>
+          <div class="tile"><div><h3 id="report-card-3-title">Provider activity</h3><p id="report-card-3-text">Review provider-linked visits and prescriptions.</p></div><div id="report-card-3-value" class="price">91</div></div>
+        </div>
+        <div class="panel">
+          <div id="report-chart" class="chartBox" aria-label="Claims by month chart">
+            <div class="chartHeader">
+              <div>
+                <h3>Claims by month</h3>
+                <p>Last 30 days</p>
+              </div>
+              <div class="chartLegend"><span class="legendDot"></span>Claims processed</div>
+            </div>
+            <div class="chartPlot" aria-hidden="true">
+              <div class="chartYAxis"><span>80</span><span>60</span><span>40</span><span>20</span><span>0</span></div>
+              <div class="chartBars">
+                <div class="chartBar"><span class="chartBarValue">52</span><span class="chartBarFill" style="height:65%"></span><span class="chartBarLabel">Jan</span></div>
+                <div class="chartBar"><span class="chartBarValue">64</span><span class="chartBarFill" style="height:80%"></span><span class="chartBarLabel">Feb</span></div>
+                <div class="chartBar"><span class="chartBarValue">48</span><span class="chartBarFill" style="height:60%"></span><span class="chartBarLabel">Mar</span></div>
+                <div class="chartBar"><span class="chartBarValue">72</span><span class="chartBarFill" style="height:90%"></span><span class="chartBarLabel">Apr</span></div>
+                <div class="chartBar"><span class="chartBarValue">61</span><span class="chartBarFill" style="height:76%"></span><span class="chartBarLabel">May</span></div>
+                <div class="chartBar"><span class="chartBarValue">78</span><span class="chartBarFill" style="height:98%"></span><span class="chartBarLabel">Jun</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>

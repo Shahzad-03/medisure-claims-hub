@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Medisure Claims Hub - Help</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<div class="shell">
+  <aside aria-label="System sidebar">
+    <div class="brand">
+      <div class="seal" aria-hidden="true">MH</div>
+      <div>
+        <h1 class="brand-title">Medisure Claims Hub</h1>
+        <p class="brand-sub">Hospital claims system</p>
+      </div>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="index.html">Dashboard</a><a href="patients.html">Patient Records</a><a href="providers.html">Provider Records</a><a href="visits.html">Visit Details</a><a href="prescriptions.html">Prescription Review</a><a href="claims.html">Claims Processing</a><a href="reports.html">Reports</a><a href="help.html" class="active">Help</a>
+    </nav>
+  </aside>
+  <main id="content">
+    <div class="wrap">
+      <section class="grid" aria-labelledby="helpTitle">
+        <div class="topline">
+          <div><div class="crumb">Help</div><h2 id="helpTitle" class="pageTitle">Guidance and support</h2></div>
+        </div>
+        <div class="grid" style="grid-template-columns:1.1fr .9fr;gap:14px">
+          <div class="panel grid">
+            <h3 style="margin:0">Frequently used guidance</h3>
+            <div class="field">
+              <label for="help-search">Search help topics</label>
+              <input id="help-search" placeholder="e.g. claim, patient, prescription" />
+            </div>
+            <details class="faq-item" open>
+              <summary>Patient search</summary>
+              <p class="muted" style="margin-bottom:0">Search by name or insurance ID to open the full record.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Visit entry</summary>
+              <p class="muted" style="margin-bottom:0">Use structured fields to record symptoms, diagnosis, and treatment notes.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Prescription review</summary>
+              <p class="muted" style="margin-bottom:0">Check medication history, side effects, and conflict warnings before claim approval.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Claim decisions</summary>
+              <p class="muted" style="margin-bottom:0">Use the Claims Processing page to approve, hold, or reject a claim and add a decision note.</p>
+            </details>
+          </div>
+          <div class="panel grid">
+            <h3 style="margin:0">Contact support</h3>
+            <div><strong>Internal support line</strong><div class="muted">0800 300 400</div></div>
+            <div><strong>Email</strong><div class="muted">support@medisure.example</div></div>
+            <a class="btn primary" href="tel:0800300400" style="text-decoration:none;display:inline-block;text-align:center">Contact support</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+<script src="js/app.js"></script>
+</body>
+</html>
